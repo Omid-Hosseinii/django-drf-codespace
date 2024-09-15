@@ -25,7 +25,8 @@ SECRET_KEY = "django-insecure-bv12pr-gnj#++88c7((^phxwf3a7c5ssmvwia5f(_2eby=cdo*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://stunning-space-robot-qg79xx7vg563xxqg-8000.app.github.dev/', 'localhost', '127.0.0.1']
+
 
 
 # Application definition
@@ -121,3 +122,11 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+CSRF_TRUSTED_ORIGINS = ['https://stunning-space-robot-qg79xx7vg563xxqg-8000.app.github.dev']
+
+
+MIDDLEWARE.remove('django.middleware.csrf.CsrfViewMiddleware')
+
+
